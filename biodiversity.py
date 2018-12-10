@@ -294,7 +294,7 @@ str2 = 'This string contains Cows'
 
 # In[269]:
 
-species['is_sheep'] = species.apply(lambda row: 'Sheep' in row.common_names,axis=1)
+species['is_sheep'] = species.common_names.apply(lambda x: 'Sheep' in x)
 
 
 # Select the rows of `species` where `is_sheep` is `True` and examine the results.
